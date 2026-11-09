@@ -1,0 +1,47 @@
+/* Remove as configurações padrão */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilização do menu */
+nav {
+    background-color: #263746;
+}
+
+/* Remove os marcadores da lista */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Coloca os itens lado a lado */
+nav li {
+    float: left;
+}
+
+/* Transforma o link em um bloco clicável */
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+/* Efeito ao passar o mouse */
+nav a:hover {
+    background-color: #40596d;
+}
+
+/* Limpa os floats do menu */
+nav ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Conteúdo da página */
+.conteudo {
+    padding: 20px;
+}
