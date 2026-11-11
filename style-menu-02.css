@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+nav {
+    background-color: #263746;
+}
+/* Logomarca à esquerda */
+.logo {
+    float: left;
+    padding: 5px 20px;
+}
+
+.logo img {
+    width: 120px;
+    height: 45px;
+    object-fit: contain;
+}
+
+/* Lista do menu */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+/* Itens do menu */
+nav li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+}
+
+nav a:hover {
+    background-color: #40596d;
+}
+
+/* Limpeza dos floats */
+nav::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Conteúdo */
+.conteudo {
+    padding: 20px;
+}
