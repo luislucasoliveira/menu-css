@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+nav {
+    background-color: #263746;
+}
+/* Logomarca à esquerda */
+.logo {
+    float: left;
+    padding: 5px 20px;
+}
+
+.logo img {
+    width: 120px;
+    height: 45px;
+    object-fit: contain;
+}
+
+/* Lista do menu */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+/* Itens do menu */
+nav li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+}
+
+nav a:hover {
+    background-color: #40596d;
+}
+
+/* Limpeza dos floats */
+nav::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.banner{
+    width: 100vw;
+    height: 90vh;
+    /*background-color: blue;*/
+    /*background-image: url("imagens/banner.jpg");*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(imagens/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    /*background-size: cover; /* Dica: 'cover' evita que a imagem fique esticada/distorcida */
+    /*background-position: center;*/
+
+    color: white;
+    font-size: 3rem;
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*body{
+    background-image: url("imagens/banner.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}*/
+
+ body {
+  margin: 0;
+  min-height: 100vh;          /* Faz o corpo ter no mínimo 100% da altura da tela */
+  display: flex;              /* Ativa o Flexbox na página inteira */
+  flex-direction: column;     /* Organiza os blocos um embaixo do outro (vertical) */
+}
+
+main {
+  flex: 1;             /* Faz o conteúdo crescer e empurrar o rodapé para o fundo */
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;       /* Permite que os itens quebrem para a linha de baixo */
+  gap: 15px;             /* Espaçamento entre as fotos */
+  max-width: 1200px;     /* Evita que fique gigante em monitores muito largos */
+  margin: 0 auto;        /* Centraliza a galeria na tela */
+  padding: 15px;
+}
+
+.galeria div {
+  flex-basis: 30%;   /* Tamanho ideal inicial: tenta ocupar 30% da linha */
+  flex-grow: 1;      /* Pode esticar? Sim (1 = Ligado, 0 = Desligado) */
+  min-width: 250px;  /* Limite mínimo antes de cair para a próxima linha */
+}
+
+.galeria img {
+  width: 100%;           /* Faz a imagem ocupar toda a largura da div */
+  height: 250px;         /* Altura fixa para deixar todas alinhadas */
+  object-fit: cover;     /* Corta o excesso sem esticar/distorcer a foto */
+  display: block;        /* Remove um pequeno espaço branco padrão abaixo de imagens */
+  border-radius: 8px;    /* Opcional: arredonda os cantos */
+}
+
+.rodape {
+  display: flex;
+  flex-wrap: wrap;        /* Faz quebrar linha no celular */
+  gap: 20px;              /* Espaço entre as colunas */
+  background-color: #222;
+  color: white;
+  padding: 30px;
+}
+
+.coluna-lateral {
+  flex: 1;                /* Ocupa 1 parte do espaço */
+  min-width: 200px;       /* Largura mínima antes de quebrar no celular */
+}
+
+.coluna-central {
+  flex: 2;                /* Ocupa 2 partes (o dobro das laterais) */
+  min-width: 300px;
+}
+
+
+/*/* Conteúdo 
+.conteudo {
+    padding: 20px;
+    color: white;
+    /*background-color:darkblue;*/
+}*/
